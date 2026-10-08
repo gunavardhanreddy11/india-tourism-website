@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All places · Safarnama</title>
+    <meta name="description" content="Browse 24 places in India by region, travel style and month, or search by place, state or dish.">
+    <meta name="theme-color" content="#0e5a5a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V14C4 8 10 4 16 2c6 2 12 6 12 12v16z' fill='%230e5a5a'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23e8a33b'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a class="brand" href="index.html" aria-label="Safarnama home">
+                <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 30V14C4 8 10 4 16 2c6 2 12 6 12 12v16z"/><circle cx="16" cy="16" r="4"/></svg>
+                <span class="brand-text">Safarnama<small>India, by kind of trip</small></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li class="nav-home"><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" aria-current="page">Places</a></li>
+                <li><a href="trip-finder.html">Trip finder</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="travel-notes.html">Travel notes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="saved-btn" id="saved-btn" type="button" aria-haspopup="dialog">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+                    <span>Saved</span> <b id="saved-count">0</b>
+                </button>
+                <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Places</span></nav>
+                <p class="eyebrow">All places</p>
+                <h1>Browse by region, style or month</h1>
+                <p class="page-intro"><span data-count-dest>24</span> places from Ladakh to the Andamans. Filter them, search for a dish, or open any place for its full guide.</p>
+            </div>
+        </section>
+
+        <section class="section explorer" id="destinations">
+            <div class="container">
+                <div class="filters" role="search">
+                    <label class="search">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                        <span class="sr-only">Search places</span>
+                        <input id="search" type="search" placeholder="Search a place, state or dish (try “biryani”)" autocomplete="off">
+                    </label>
+                    <div class="filter-row">
+                        <div class="seg" id="region-filter" role="group" aria-label="Region"></div>
+                    </div>
+                    <div class="filter-row filter-row-2">
+                        <div class="chips" id="style-filter" role="group" aria-label="Travel style"></div>
+                        <label class="month-select">
+                            <span>Going in</span>
+                            <select id="month-filter"></select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="results-bar">
+                    <p id="result-count" aria-live="polite"></p>
+                    <button class="link-btn" id="reset-filters" type="button" hidden>Clear filters</button>
+                </div>
+
+                <div class="dest-grid" id="dest-grid"></div>
+                <div class="empty" id="empty" hidden>
+                    <p><strong>Nothing matches all of that.</strong> Try another month or clear a filter.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="border-motif border-motif-dark" aria-hidden="true"></div>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a class="brand brand-light" href="index.html">
+                    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 30V14C4 8 10 4 16 2c6 2 12 6 12 12v16z"/><circle cx="16" cy="16" r="4"/></svg>
+                    <span class="brand-text">Safarnama</span>
+                </a>
+                <p>A student project built for the PromptX hackathon. It's a starting point for planning, not a booking site. Always check official sources before you travel.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="destinations.html">All places</a></li>
+                    <li><a href="trip-finder.html">Trip finder</a></li>
+                    <li><a href="culture.html">Culture, festivals &amp; food</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="travel-notes.html">Travel notes</a></li>
+                    <li><a href="about.html">About this project</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Official resources</h4>
+                <ul>
+                    <li><a href="https://www.incredibleindia.gov.in" target="_blank" rel="noopener">Incredible India</a></li>
+                    <li><a href="https://www.irctc.co.in" target="_blank" rel="noopener">IRCTC train booking</a></li>
+                    <li><a href="https://indianvisaonline.gov.in" target="_blank" rel="noopener">Indian e-Visa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Safarnama · Made for PromptX · Photos from Wikimedia Commons (<a href="about.html#credits">credits</a>) · Fonts: Rozha One &amp; Mukta</p>
+        </div>
+    </footer>
+
+    <!-- Shortlist drawer (on every page) -->
+    <dialog class="drawer" id="saved-drawer" aria-labelledby="drawer-title">
+        <div class="drawer-inner">
+            <div class="drawer-head">
+                <h3 id="drawer-title">Your shortlist</h3>
+                <button class="icon-btn" type="button" data-close aria-label="Close shortlist">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                </button>
+            </div>
+            <ul class="saved-list" id="saved-list"></ul>
+            <p class="saved-empty" id="saved-empty">Nothing saved yet. Tap the bookmark on any place to add it here.</p>
+            <div class="drawer-actions" id="drawer-actions">
+                <a class="btn btn-primary" id="share-wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+                <button class="btn btn-ghost" id="copy-list" type="button">Copy as text</button>
+                <button class="link-btn" id="clear-list" type="button">Clear list</button>
+            </div>
+        </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
